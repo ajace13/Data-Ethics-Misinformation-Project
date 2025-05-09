@@ -15,6 +15,6 @@ This project aims to test the ability of ML and LLMs when it comes to handling m
 * https://www.kaggle.com/datasets/stevenpeutz/misinformation-fake-news-text-dataset-79k?resource=download&select=DataSet_Misinfo_TRUE.csv
 * https://www.kaggle.com/datasets/abaghyangor/fake-news-dataset
 
-## Benchmark for QA dataset (for LLM generation
+## Benchmark for QA dataset (for LLM generation)
 * https://github.com/nyu-mll/BBQ/tree/main
   
