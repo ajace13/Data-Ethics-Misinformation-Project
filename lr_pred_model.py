@@ -24,10 +24,10 @@ nltk.download('stopwords')
 nltk.download('wordnet')
 #%%
 # Initialize data
-fake = pd.read_csv("Fake.csv")
+fake = pd.read_csv("Data\Fake.csv")
 fake_df = pd.DataFrame(fake)
 
-real = pd.read_csv("True.csv")
+real = pd.read_csv("Data\True.csv")
 real_df = pd.DataFrame(real)
 
 fake_df['label'] = 1
