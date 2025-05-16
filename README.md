@@ -11,6 +11,7 @@ This project aims to test the ability of ML and LLMs when it comes to handling m
 * How does the performance of LLMs compare to that of human fact-checkers on the same news samples?
 
 ## Datasets
+* https://www.kaggle.com/datasets/emineyetm/fake-news-detection-datasets/data
 * https://www.kaggle.com/datasets/stevenpeutz/misinformation-fake-news-text-dataset-79k?resource=download&select=DataSet_Misinfo_FAKE.csv
 * https://www.kaggle.com/datasets/stevenpeutz/misinformation-fake-news-text-dataset-79k?resource=download&select=DataSet_Misinfo_TRUE.csv
 * https://www.kaggle.com/datasets/abaghyangor/fake-news-dataset
