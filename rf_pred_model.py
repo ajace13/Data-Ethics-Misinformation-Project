@@ -9,7 +9,7 @@ import string
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import classification_report, confusion_matrix, roc_auc_score, roc_curve
+from sklearn.metrics import classification_report, confusion_matrix
 from sklearn.ensemble import RandomForestClassifier
 
 import nltk
@@ -61,6 +61,7 @@ df = combined_df.sample(frac=1, random_state=42).reset_index(drop=True)
 
 # Data pre-processing
 stop_words = set(stopwords.words('english'))
+# Strip words to its base form 
 lemmatizer = WordNetLemmatizer()
 
 def clean_text(text):
@@ -98,7 +99,5 @@ plt.xlabel('Predicted')
 plt.ylabel('Actual')
 plt.show()
 
-
 # %%
 # Test with more data
-# %%

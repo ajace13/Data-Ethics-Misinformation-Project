@@ -10,6 +10,38 @@ from sklearn.metrics import accuracy_score
 from scipy.stats import zscore
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import GridSearchCV, KFold
+import nltk
+from nltk.corpus import stopwords
+from nltk.stem import WordNetLemmatizer
+import re
+import string
+
+# Data pre-processing
+stop_words = set(stopwords.words('english'))
+lemmatizer = WordNetLemmatizer()
+
+def clean_text(text):
+    text = str(text)
+    text = text.lower()
+    text = re.sub(r'\d+', '', text)
+    text = text.translate(str.maketrans('', '', string.punctuation))
+    text = ' '.join([lemmatizer.lemmatize(word) for word in text.split() if word not in stop_words])
+    return text
+
+# def rf_model(df):
+    stop_words = set(stopwords.words('english'))
+    lemmatizer = WordNetLemmatizer()
+    
+    cols = ['text', 'title', 'content']
+    for i in df.columns():
+        if i == 'text':
+            break
+    return None
+
+
+
+
+
 
 # Functions -- Random Forest Classifier
 def platform_preprocess(X_train, X_test):
@@ -43,15 +75,6 @@ def platform_test_model(model, X_test, y_test):
     predictions = model.predict(X_test)
     accuracy = accuracy_score(y_test, predictions)
     return accuracy
-
-# pp_X_train, pp_X_test = platform_preprocess(X_train, X_test)
-# train
-# model = platform_train_process(pp_X_train, y_train)
-# print(str(model))
-
-# # test
-# accuracy = platform_test_model(model, pp_X_test, y_test)
-# print("Acc: " + str(accuracy))
 
 # Functions -- Logistic Regression
 def platform_train_logreg(X_train1, y_train1):
