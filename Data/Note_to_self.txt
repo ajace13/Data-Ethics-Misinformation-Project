@@ -1,0 +1,3 @@
+Notes for uploading data
+* Datasets are not uploadable for any file that is larger than 50 MiB.
+* For files larger than 25MiB we need to clone repository then move into folder locally and then manually push everything through the terminal
