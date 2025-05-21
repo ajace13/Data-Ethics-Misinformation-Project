@@ -28,19 +28,10 @@ def clean_text(text):
     text = ' '.join([lemmatizer.lemmatize(word) for word in text.split() if word not in stop_words])
     return text
 
-# def rf_model(df):
-    stop_words = set(stopwords.words('english'))
-    lemmatizer = WordNetLemmatizer()
-    
-    cols = ['text', 'title', 'content']
-    for i in df.columns():
-        if i == 'text':
-            break
-    return None
-
-
-
-
+def pre_process_text_only(df):
+    df['text'] = df['text'].fillna('')
+    df['cleaned_text'] = df['text'].apply(clean_text)
+    return df
 
 
 # Functions -- Random Forest Classifier
@@ -101,3 +92,8 @@ def platform_train_logreg(X_train1, y_train1):
     return grid.best_estimator_
 
 # Create one ultimate data pre-processor so that we can test more data on our models. 
+
+    
+    
+    
+    
