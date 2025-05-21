@@ -16,7 +16,7 @@ import nltk
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 
-from model import *
+from helper_functions import *
 
 import warnings
 warnings.filterwarnings('ignore')

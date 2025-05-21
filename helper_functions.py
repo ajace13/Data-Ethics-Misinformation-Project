@@ -100,3 +100,4 @@ def platform_train_logreg(X_train1, y_train1):
     # best_estimator_ already refits on full X_train
     return grid.best_estimator_
 
+# Create one ultimate data pre-processor so that we can test more data on our models. 
